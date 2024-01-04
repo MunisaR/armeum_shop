@@ -13,7 +13,6 @@ class App extends StatelessWidget {
       theme: ARAppTheme.lightTheme,
       darkTheme: ARAppTheme.darkTheme,
       home: const OnBoardingScreen(),
-
     );
   }
 }
