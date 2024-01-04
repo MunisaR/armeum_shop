@@ -1,23 +1,27 @@
+import 'package:armeum_shop/features/authentication/controllers/onboarding_controller.dart';
 import 'package:armeum_shop/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:armeum_shop/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:armeum_shop/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:armeum_shop/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:armeum_shop/utils/constants/image_strings.dart';
-import 'package:armeum_shop/utils/constants/sizes.dart';
 import 'package:armeum_shop/utils/constants/text_strings.dart';
-import 'package:armeum_shop/utils/device/device_utility.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+import 'package:get/get.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
+
     return Scaffold(
       body: Stack(
         children: [
           ////Horizontal Scrollable Pages
           PageView(
+            controller: controller.pageController,
+            onPageChanged: controller.updatePageIndicator,
             children: const [
               OnBoardingPage(
                 image: ARImages.onBoardingImage1,
@@ -44,16 +48,11 @@ class OnBoardingScreen extends StatelessWidget {
           const OnBoardingDotNavigation(),
 
           //// Circular button
-          Positioned(
-            right: ARSizes.defaultSpace,
-            bottom: ARDeviceUtils.getBottomNavigationBarHeight(),
-            child: ElevatedButton(
-              onPressed: () {},
-              child: const Icon(Iconsax.arrow_right_3),
-            ),
-          )
+          const OnboardingNextButton()
         ],
       ),
     );
   }
 }
+
+

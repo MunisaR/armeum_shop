@@ -1,3 +1,4 @@
+import 'package:armeum_shop/features/authentication/controllers/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/constants/sizes.dart';
@@ -14,7 +15,7 @@ class OnBoardingSkip extends StatelessWidget {
       top: ARDeviceUtils.getAppBarHeight(),
       right: ARSizes.defaultSpace,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () => OnBoardingController.instance.skipPage(),
         child: Text("Skip", style: Theme.of(context).textTheme.headlineSmall),
       ),
     );
