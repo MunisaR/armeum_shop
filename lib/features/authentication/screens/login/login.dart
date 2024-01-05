@@ -140,9 +140,45 @@ class LoginScreen extends StatelessWidget {
                     endIndent: 60,
                   )),
                 ],
-              )
+              ),
 
               ///Footer
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: ARColors.grey),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: ARSizes.iconMd,
+                        height: ARSizes.iconMd,
+                        image: AssetImage(ARImages.google),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: ARSizes.spaceBtwItems,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: ARColors.grey),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: const Image(
+                        width: ARSizes.iconMd,
+                        height: ARSizes.iconMd,
+                        image: AssetImage(ARImages.facebook),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ),
