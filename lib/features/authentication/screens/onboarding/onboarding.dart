@@ -54,5 +54,3 @@ class OnBoardingScreen extends StatelessWidget {
     );
   }
 }
-
-
