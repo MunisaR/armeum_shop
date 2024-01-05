@@ -29,6 +29,6 @@ class ARLoginHeader extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ],
-    );;
+    );
   }
 }

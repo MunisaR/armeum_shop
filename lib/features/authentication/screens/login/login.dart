@@ -3,7 +3,6 @@ import 'package:armeum_shop/common/widgets/login_signup/ARFormDivider.dart';
 import 'package:armeum_shop/common/widgets/login_signup/ARSocialButtons.dart';
 import 'package:armeum_shop/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:armeum_shop/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:armeum_shop/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../utils/constants/sizes.dart';
@@ -13,7 +12,6 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = ARHelperFunctions.isDarkMode(context);
 
     return Scaffold(
       body: SingleChildScrollView(

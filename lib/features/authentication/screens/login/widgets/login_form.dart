@@ -3,14 +3,12 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
-import '../../../../../utils/helpers/helper_functions.dart';
 
 class ARLoginForm extends StatelessWidget {
   const ARLoginForm({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final dark = ARHelperFunctions.isDarkMode(context);
     return Form(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: ARSizes.spaceBtwSections),
