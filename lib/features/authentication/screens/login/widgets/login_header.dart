@@ -10,14 +10,14 @@ class ARLoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark =ARHelperFunctions.isDarkMode(context);
+    final dark = ARHelperFunctions.isDarkMode(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
           height: 150,
-          image: AssetImage(
-              dark ? ARImages.lightAppLogo : ARImages.darkAppLogo),
+          image:
+              AssetImage(dark ? ARImages.lightAppLogo : ARImages.darkAppLogo),
         ),
         Text(
           ARTexts.loginTitle,
