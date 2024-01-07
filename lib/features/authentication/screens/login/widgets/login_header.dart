@@ -14,6 +14,7 @@ class ARLoginHeader extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Image(
+
           height: 150,
           image:
               AssetImage(dark ? ARImages.lightAppLogo : ARImages.darkAppLogo),
